@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Mobile</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Menu Hambúrguer -->
+    <input type="checkbox" id="menu-toggle">
+    <div class="menu-icon" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <nav class="menu">
+        <div class="menu-buttons">
+            <a href="#">Home</a>
+            <a href="#">Sobre</a>
+            <a href="#">Serviços</a>
+            <a href="#">Contato</a>
+        </div>
+        <div class="menu-social">
+            <a href="https://instagram.com" target="_blank">Instagram</a>
+            <a href="https://twitter.com" target="_blank">Twitter</a>
+            <a href="https://github.com" target="_blank">GitHub</a>
+        </div>
+    </nav>
+
+    <div class="blur-background"></div>
+
+    <!-- Cards de Notícias -->
+    <div class="news-cards">
+        <div class="news-card" onclick="markAsRead(this)">
+            <img src="anonymous-dark-background-mask-3840x2160-6303.jpg" alt="Notícia 1">
+            <h3>Sistema do governo hackeado</h3>
+            <p>Um grupo de hackers invadiu o sistema do governo e...</p>
+            <small>Publicado em 27/08/2024 09:38</small>
+        </div>
+       <div class="news-card" onclick="markAsRead(this)">
+            <img src="anonymous-dark-background-mask-3840x2160-6303.jpg" alt="Notícia 1">
+            <h3>Título da Notícia 1</h3>
+            <p>Um trecho da notícia para atrair a atenção do leitor.</p>
+            <small>Publicado em 01/09/2024 10:00</small>
+        </div>
+        <div class="news-card" onclick="markAsRead(this)">
+            <img src="anonymous-dark-background-mask-3840x2160-6303.jpg" alt="Notícia 1">
+            <h3>Título da Notícia 1</h3>
+            <p>Um trecho da notícia para atrair a atenção do leitor.</p>
+            <small>Publicado em 01/09/2024 10:00</small>
+        </div>
+        <div class="news-card" onclick="markAsRead(this)">
+            <img src="anonymous-dark-background-mask-3840x2160-6303.jpg" alt="Notícia 2">
+            <h3>Título da Notícia 2</h3>
+            <p>Um trecho da notícia para atrair a atenção do leitor.</p>
+            <small>Publicado em 02/09/2024 11:30</small>
+        </div>
+        <!-- Adicionar mais 3 cards conforme necessário -->
+    </div>
+
+    <!-- Footer com Formulário de Contato -->
+    <footer>
+        <form name="contact" method="POST" data-netlify="true">
+            <input type="hidden" name="form-name" value="contact">
+            <input type="text" name="name" placeholder="Seu Nome" required>
+            <input type="email" name="email" placeholder="Seu E-mail" required>
+            <textarea name="message" placeholder="Sua Mensagem" required></textarea>
+            <input type="submit" value="Enviar">
+        </form>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,213 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #1a1a40; /* Fundo roxo */
+    color: #ffffff;
+}
+
+/* Estilo do menu hambúrguer */
+#menu-toggle {
+    display: none;
+}
+
+.menu-icon {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 35px;
+    height: 30px;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.menu-icon div {
+    width: 100%;
+    height: 5px;
+    background-color: #ffffff;
+    margin: 6px 0;
+    transition: all 0.3s ease;
+}
+
+.menu-icon.open div:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+}
+
+.menu-icon.open div:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-icon.open div:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background-color: #292961;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    z-index: 90;
+    padding: 20px;
+    box-shadow: 4px 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.menu.open {
+    transform: translateX(0);
+}
+
+.blur-background {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    backdrop-filter: blur(15px);
+    z-index: 80;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.blur-background.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.menu-buttons {
+    margin-top: 50px;
+}
+
+.menu-buttons a {
+    display: block;
+    color: #ffffff;
+    padding: 10px;
+    text-decoration: none;
+    margin-bottom: 10px;
+    background-color: #3b3b6d;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.menu-buttons a:hover {
+    background-color: #51519d;
+}
+
+.menu-social {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.menu-social a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/* Cards de notícias */
+.news-cards {
+    margin: 80px 20px;
+}
+
+.news-card {
+    background-color: #292961;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.news-card:hover {
+    background-color: #51519d;
+}
+
+.news-card img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.news-card h3 {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.news-card p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.news-card small {
+    display: block;
+    text-align: right;
+    font-size: 12px;
+    opacity: 0.7;
+}
+
+/* Estilização para o estado do card após leitura */
+.news-card.read img {
+    filter: blur(5px);
+}
+
+.news-card.read h3 {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 0;
+    top: -50px; /* Ajuste para posicionar sobre o card */
+    text-align: center;
+    width: 100%;
+}
+
+.news-card.read h3:after {
+    content: " (Você acabou de ler este artigo)";
+    font-size: 14px;
+    color: #f5f5f5;
+    display: block;
+    text-align: center;
+}
+
+/* Estilo do formulário no footer */
+footer {
+    background-color: #1a1a40;
+    padding: 20px;
+    text-align: center;
+}
+
+form {
+    background-color: #ffffff; /* Fundo branco para o formulário */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+input, textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    width: 93%;
+}
+
+input[type="submit"] {
+    background-color: #3b3b6d;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #51519d;
+}
